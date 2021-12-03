@@ -16,13 +16,13 @@ class MainActivity : AppCompatActivity() {
         carRecyclerView = findViewById(R.id.car_recycler_view)
 
         val carList:List<Car> = listOf(
-            Car("Ferrari", R.drawable.ferrari_red),
-            Car("Audi", R.drawable.audi),
-            Car("Camara", R.drawable.camara)
+            Car.SportCar("Ferrari", 500, 100, "Red"),
+            Car.CityCar("Ford", 5, 10000)
         )
 
         carRecyclerView.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+
         carRecyclerView.adapter = CarAdapter(carList)
 
     }
